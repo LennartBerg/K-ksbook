@@ -1,0 +1,7 @@
+@import "global.css";
+@import "recipePreviewLayout.css";
+
+.select-button {
+    background-color: var(--text-alt);
+    color: var(--background-secondary);
+}

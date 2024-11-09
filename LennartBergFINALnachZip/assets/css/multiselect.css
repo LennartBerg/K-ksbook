@@ -1,0 +1,29 @@
+.select-multi {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--primary-alt);
+    background-color: var(--background-secondary);
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.select-multi option {
+    padding: 10px;
+    margin: 2px 0;
+    border-bottom: 1px solid var(--primary-alt);
+    background-color: var(--background-secondary);
+    cursor: pointer;
+}
+
+.select-multi option:hover {
+    background-color: var(--primary-main);
+}
+
+.select-multi:focus, .select-multi:active {
+    outline: none;
+    border-color: var(--primary-secondary);
+}
+
