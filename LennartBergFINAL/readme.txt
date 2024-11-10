@@ -6,13 +6,24 @@ Anmeldedaten: c@c.de, pw: 12312313
 
 Finale Abgabe:
 
-Nicht umgesetzt: Favoritenliste, da ich die Zeit nicht mehr hatte, um das zu implementieren. Die Funktionalität ist
-jedoch zumindest datenbankseitig zu Teilen vorhanden.
+Nicht umgesetzt:
+- Favoritenliste, da ich die Zeit nicht mehr hatte, um das zu implementieren. Die Funktionalität ist
+  jedoch zumindest datenbankseitig zu Teilen vorhanden.
 
 
+Designentscheidungen:
+- Beim Erstellen von Rezepten kann ein Fehler auftreten. In diesem Fall werden alle Felder wieder mit den alten Daten voreingestellt.
+  Nur das Bild muss erneut hochgeladen werden. Das ist so gewollt, da ich es für sinnvoll halte, dass der Nutzer das Bild noch einmal
+  überprüfen kann, bevor er es hochlädt.
 
+- Kommentare können nicht bearbeitet werden. Das ist so gewollt, da ich es für sinnvoll halte, dass der Nutzer sich überlegt, was er schreibt.
+  Ein Kommentar kann jedoch gelöscht und neu geschrieben werden.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
 
 Aufgabenblatt 6:
+
 
 API auf Startseite zum Aufrufen eines zufälligen Rezepts. Dazu bestehen außerdem Filtermöglichkeiten.
     siehe hierzu getRandomRecipe.php
@@ -21,6 +32,7 @@ Datenschutz, Impressum und CO.
     Bestätigung der Datenschutzbestimmungen und AGBs bei der Registrierung.
     Bestätigung der Veröffentlichung von Rezepten und Bildern bei der Erstellung.
     Password-Hashing und -Salting.
+    Identifizierung mittels E-Mail-Adresse und Passwort.
 
 Cookie-Banner (include/cookies.php)
     Der Nutzer wird beim ersten Besuch der Seite aufgefordert, die Cookies zu akzeptieren.
@@ -53,7 +65,8 @@ Aufgabenblatt 5:
     Features:
     - (JS+AJAX) Erweiterung der Startseite um Beiträge, die in einer Sammlung gespeichert werden. Bei jedem Klick auf "I want more Recipes" werden weitere Beiträge geladen.
     - (JS+AJAX) Beiträge können auf der viewRecipe-Seite durch einen Klick auf den jeweiligen Stern bewertet werden.
-    - (JS)      Rezepte und Kommentare können nun nur nach einer Bestätigung gelöscht werden.
+    - (JS)      Rezepte, Kommentare und der eigene Account können nun nur nach einer Bestätigung gelöscht werden.
+    - (JS)      Beim Erstellen von Rezepten wird ein Vorschaubild des neuen Bildes angezeigt.
 
     Behobene Fehler der letzten Abgabe:
     - Beim Bearbeiten von Rezepten sind jetzt alle Felder mit den alten Daten voreingestellt (bspw. Meal type)
@@ -65,3 +78,65 @@ Aufgabenblatt 5:
     Nicht behoben (Designentscheidung):
     Im Menü gibt es den Eintrag "Create Recipe", obwohl ich nicht angemeldet bin. Klickt der unangemeldete Nutzer darauf, wird er auf die Login-Seite weitergeleitet (inklusive Nachricht).
     Das ist so gewollt, da ich es für sinnvoll halte, dass der Nutzer weiß, dass er sich anmelden muss, um ein Rezept zu erstellen und somit nicht lange suchen muss.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Aufgabenblatt 4
+
+    Features:
+    - Speicherung von Daten mit SQLite3.
+    - PDO-Implementierung für SQLite3.
+    - Datenschema (siehe Planung) wurde umgesetzt.
+    - Automatische Erstellung einer Datenbank, falls diese nicht vorhanden ist.
+    - Transaktionen überall, wo es sinnvoll/nötig ist.
+    - Prepared Statements zur Vermeidung von SQL-Injections.
+    - Passwort-Hashing und -Salting.
+    - Exception-Handling für alle möglichen Fehlerfälle.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Aufgabenblatt 3
+
+    Features:
+    - Registrierung und Login
+    - Logout
+    - Profilseite
+    - Rezept erstellen
+    - Rezept bearbeiten
+    - Rezept löschen
+    - Kommentare schreiben
+    - Kommentare löschen
+    - Rezept bewerten
+    - Rezept ansehen
+    - Profil ansehen
+    - Profil bearbeiten
+    - Rezepte filtern
+    - Zustandsspeicherung in Session
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Aufgabenblatt 2
+
+    Features:
+    - Optische Gestaltung der Website
+    - Einsatz von CSS-Flexbox
+    - Responsives Design
+    - Farbgebung (wave-getestet)
+    - Accessibility (wave-getestet)
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Aufgabenblatt 1
+
+    Features:
+    - Grundgerüst der Website
+    - Navigation
+    - Startseite mit Rezeptübersicht
+    - Rezeptansicht
+    - Profilseite
+    - Login
+    - Registrierung
